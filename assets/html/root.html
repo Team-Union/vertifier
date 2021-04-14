@@ -9,3 +9,60 @@
         <a href="https://discord.com/api/oauth2/authorize?client_id={client_id}&redirect_uri={redirect}&response_type=code&scope=identify%20guilds">대시보드로 이동</a>
     </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>verifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="verifier">
+    <meta name="og:title" content="verifier">
+    <meta name="description" content="verifier">
+    <meta name="og:description" content="verifier">
+    <meta name="og:url" content="{domain}">
+    <meta name="og:sitename" content="verifier">
+    <meta name="theme-color" content="#000000">
+    <meta name="og:image" content="/static/image/static/image/inticon-512.png">
+    <meta name="twitter:image" content="/static/image/static/image/inticon-512.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="verifier">
+    <meta name="twitter:description" content="verifier">
+    <meta name="twitter:url" content="{domain}">
+    <link rel="shortcut icon" href="/static/image/static/image/inticon-512.png" type="image/png">
+    <link rel="stylesheet" href="/static/css/verify.css">
+    <link rel="stylesheet" href="/static/css/root.css">
+    <link rel="icon" href="/static/image/static/image/inticon-512.png">
+    <script src="/static/js/loadingbar.js"></script>
+    <!--<link rel="manifest" href="/static/json/manifest.json">-->
+    <link rel="apple-touch-icon" href="/static/image/inticon-512.png">
+</head>
+
+<body>
+    <div id="loadingbar">
+        <div class="dot" id="dot1"></div>
+        <div class="dot" id="dot2"></div>
+        <div class="dot" id="dot3"></div>
+        <div class="dot" id="dot4"></div>
+    </div>
+    <div id="main">
+        <div class="btn-area">
+            <form action="https://discord.com/api/oauth2/authorize">
+                <input type="hidden" name="client_id" value="{client_id}">
+                <input type="hidden" name="permissions" value="8">
+                <input type="hidden" name="scope" value="bot">
+                <button type="submit">봇 초대하기</button>
+            </form><br><br>
+            <form action="https://discord.com/api/oauth2/authorize">
+                <input type="hidden" name="client_id" value="{client_id}">
+                <input type="hidden" name="redirect_uri" value="{redirect}">
+                <input type="hidden" name="response_type" value="code">
+                <input type="hidden" name="scope" value="identify guilds">
+                <button type="submit">대시보드로 이동</button>
+            </form><br><br>
+          </div>
+    </div>
+</body>
+
+</html>
