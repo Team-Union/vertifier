@@ -1,6 +1,6 @@
 const fs = require('fs');
 module.exports = {
-    pathname: '/',
+    pathname: '/unsupported',
     method: 'GET',
     run: async (client, req, res, parsed) => {
         res.writeHead(200, {
