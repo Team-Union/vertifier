@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>verifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+    if (window.navigator.userAgent.match(/MSIE|Internet Explorer|Trident/i)) {
+        // IE!!
+        window.location = "microsoft-edge:" + window.location.href; // 엣지 창을 열고
+        window.location.replace('/unsupported-browser'); // 안내문을 보인다.
+        /* 여기서 파일을 별도로 분리해서 하는 이유는 무엇일까? 
+        HTML 파일을 분리하지 않으면 안내문이 보이지 않고 빈 화면이 보이다가 엣지 창이 열리고 끝나기 때문이다. */
+    }
+    </script>
+</body>
+
+</html>
